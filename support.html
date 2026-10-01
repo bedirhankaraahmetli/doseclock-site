@@ -6,6 +6,9 @@
 <title>DoseClock Support</title>
 <link rel="icon" href="icon.png">
 <meta name="description" content="Help with DoseClock, the medication reminder with no account and no subscription.">
+<link rel="alternate" hreflang="en" href="https://doseclock.app/support.html">
+<link rel="alternate" hreflang="tr" href="https://doseclock.app/tr/support.html">
+<link rel="alternate" hreflang="x-default" href="https://doseclock.app/support.html">
 <style>
   :root { --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --accent:#10606e; --rule:#cbd5e1; }
   @media (prefers-color-scheme: dark) {
@@ -17,17 +20,30 @@
   main { max-width: 42rem; margin: 0 auto; padding: 2rem 1rem 4rem; }
   h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5rem; }
   h2 { font-size: 1.3rem; margin: 2.25rem 0 .5rem; }
+  h3 { font-size: 1.1rem; margin: 1.5rem 0 .25rem; }
   p, li { max-width: 38rem; }
   .lede { color: var(--muted); margin-top: 0; }
   .contact { border-left: 4px solid var(--accent); padding: .25rem 0 .25rem 1rem; }
   a { color: var(--accent); }
-  nav { font-size: 1rem; margin-bottom: 1.5rem; }
-  hr { border: 0; border-top: 1.5px solid var(--rule); margin: 4rem 0 3rem; }
+  header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+           gap: .75rem 1.5rem; margin-bottom: 2.5rem; }
+  .brand { display:flex; align-items:center; gap:1rem; font-weight:600; font-size:1.6rem;
+           letter-spacing:-0.01em; color:var(--fg); text-decoration:none; }
+  .brand img { width:64px; height:64px; border-radius:15px; }
+  nav { font-size: 1rem; display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; }
+  nav [aria-current] { color: var(--fg); font-weight: 600; text-decoration: none; }
 </style>
 </head>
 <body>
 <main>
-<nav><a href="./">DoseClock</a> · <a href="#tr" hreflang="tr" lang="tr">Türkçe</a> · <a href="privacy.html">Privacy Policy</a></nav>
+<header>
+  <a class="brand" href="./"><img src="icon.png" alt="" width="64" height="64">DoseClock</a>
+  <nav>
+    <a href="tr/support.html" hreflang="tr" lang="tr">Türkçe</a>
+    <a href="support.html" aria-current="page">Support</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</header>
 
 <article lang="en">
 <h1>DoseClock Support</h1>
@@ -81,14 +97,53 @@ locked away.</p>
 <em>Restore purchase</em> brings it back on a new iPhone or after reinstalling, using your
 Apple ID. There is no DoseClock account.</p>
 
-<h2>How do I move to a new iPhone?</h2>
-<p>On your old iPhone: Settings → Your data → Backup → <em>Save a backup</em>. Choose a
-passphrase and save the file somewhere you can reach from the new phone, such as iCloud
-Drive. On the new iPhone, install DoseClock, then go to Settings → Your data → Backup →
-<em>Restore from a backup</em>.
-<strong>We can't recover a forgotten passphrase</strong>, so keep it somewhere safe.</p>
+<h2 id="backup">Backups: how your data moves without an account</h2>
+<p>DoseClock has no account and no server, so your information exists in one place: your
+iPhone. Nothing is synced in the background, and there is no copy anywhere for us to send
+back to you. Instead, <strong>you keep the copy</strong>. A backup is a single file, locked
+with a passphrase you choose, that you save wherever you like: iCloud Drive, the Files app,
+your computer, or an email to yourself. Saving and restoring a backup is always free.</p>
+
+<h3>What a backup contains</h3>
+<p>Your medications, schedules, dose history, pill counts and refill details, and the people
+you manage medications for. App settings, such as appearance and the refill reminder time,
+stay with each iPhone. After a restore, DoseClock sets all your reminders again by
+itself.</p>
+
+<h3>Making a backup</h3>
+<p>Settings → Your data → Backup. Enter a passphrase, tap <em>Save a backup</em>, and choose
+where the file goes. A backup holds what you had at the moment you saved it, so save a new
+one after you change your medications.</p>
+
+<h3>Deleting and reinstalling on the same iPhone</h3>
+<p>Deleting DoseClock deletes its data and cancels its reminders. <strong>Save a backup
+before you delete the app</strong>, then restore it after reinstalling. If you only need to
+free up space, use <em>Offload App</em> instead (Settings → General → iPhone Storage →
+DoseClock): it removes the app but keeps your data, and everything is still there when you
+reinstall.</p>
+
+<h3>Moving to a new iPhone</h3>
+<p>Save a backup on your old iPhone, somewhere the new one can reach, such as iCloud Drive.
+On the new iPhone, install DoseClock, then go to Settings → Your data → Backup →
+<em>Restore from a backup</em>, choose the file and enter the passphrase.</p>
 <p>An iCloud device backup does not carry DoseClock data to a new phone. This is deliberate:
-the key that unlocks your data never leaves the iPhone it was made on.</p>
+the key that unlocks your data never leaves the iPhone it was made on, so your own backup
+file is the only way across.</p>
+
+<h3>Restoring</h3>
+<p>Restoring replaces everything on this iPhone with what is in the file. If you already
+added medications on the new phone, they are replaced. A backup from a newer version of
+DoseClock needs the app to be updated first.</p>
+
+<h3>Your purchase and free trial</h3>
+<p>These belong to your Apple ID, not to DoseClock and not to the backup file. On a new
+iPhone or after reinstalling, sign in with the same Apple ID, open Settings →
+<em>Full Access</em> and tap <em>Restore purchase</em>.</p>
+
+<h3>If the passphrase is forgotten</h3>
+<p><strong>Nobody can open the backup, including us.</strong> We never see your file or your
+passphrase, so there is nothing we could reset. Keep the passphrase somewhere safe, apart
+from your phone.</p>
 
 <h2>How do I share my history with my doctor?</h2>
 <p>Open History, choose the period, tap <em>Export</em>, and pick PDF (to print or send) or
@@ -106,88 +161,7 @@ Always follow your doctor's and pharmacist's instructions.</p>
 <p><a href="privacy.html">Privacy Policy</a></p>
 </article>
 
-<hr>
 
-<article lang="tr" id="tr">
-<h1>DoseClock Destek</h1>
-<p class="lede">Hesap gerektirmeyen, abonelik istemeyen ve veri toplamayan bir ilaç
-hatırlatıcı.</p>
-
-<p class="contact">Sorunuz ya da bir sorununuz mu var?
-<a href="mailto:contact@doseclock.app">contact@doseclock.app</a> adresine yazın. Lütfen iPhone
-modelinizi ve iOS sürümünüzü belirtin. İlaç listenizi ya da bir yedek dosyasını asla
-göndermeyin; size yardımcı olmak için bunlara ihtiyacımız yok.</p>
-
-<h2>iPhone'um sessizdeyken ya da bir odak açıkken hatırlatma ses çıkarır mı?</h2>
-<p>Bu, iOS sürümünüze ve bir izne bağlıdır.</p>
-<ul>
-  <li><strong>iOS 26 ve sonrası, alarmlara izin verildiyse:</strong> <em>Alarm</em> olarak
-  ayarlanan bir ilaç Apple'ın alarm sistemini kullanır. Sessiz modda ve her odakta çalar,
-  kilit ekranında bir <em>Alındı</em> düğmesiyle görünür.</li>
-  <li><strong>Daha eski iOS sürümlerinde ya da alarmlara izin verilmediyse:</strong>
-  hatırlatmalar zamana duyarlı bildirimlerdir. Uyku gibi bir odak, o odak için zamana duyarlı
-  bildirimlere izin vermediğiniz sürece onları susturur: Ayarlar → Odak → odağı seçin →
-  Uygulamalar → <em>Zamana Duyarlı Bildirimler</em>'i açın. Kullandığınız her odak için
-  tekrarlayın.</li>
-  <li><em>Sessiz hatırlatma</em> olarak ayarlanan bir ilaç her zaman sessiz modu ve odağı dikkate alan
-  sıradan bir bildirimdir.</li>
-</ul>
-<p>DoseClock'ta Bugün ekranındaki zile dokunarak <em>Hatırlatıcı durumu</em>'nu açın.
-iPhone'unuzun neyi yapıp neyi yapmayacağını gösterir; <em>Alarmımı test et</em> yaklaşık on
-saniye içinde çalar.</p>
-
-<h2>Alarmı durdurdum ama doz kaçırıldı görünüyor</h2>
-<p>iOS 26 ve sonrasında alarmı kaydırarak durdurmak yalnızca sesi durdurur, dozu kaydetmez;
-çünkü bir sesi durdurmak ilacı almakla aynı şey değildir. Alarmdaki <em>Alındı</em>'ya
-dokunun ya da dozu Bugün ekranında işaretleyin.</p>
-
-<h2>Uygulamayı açmam gerekiyor mu?</h2>
-<p>iOS, bir uygulamanın önceden yalnızca sınırlı sayıda hatırlatma kurmasına izin verir.
-DoseClock gidebildiği kadar ileriye kurar ve siz uygulamayı her açtığınızda tamamlar.
-Hatırlatmalarınız bitmek üzereyse, DoseClock birkaç gün önceden bunu söyleyen tek bir
-bildirim gönderir. O zaman uygulamayı açmanız yeterlidir. <em>Hatırlatıcı durumu</em>,
-hatırlatmalarınızın şu an hangi tarihe kadar kurulu olduğunu gösterir.</p>
-
-<h2>Ücretsiz deneme bitince ne olur?</h2>
-<p>İlk ilacınızı eklerken DoseClock ücretsiz denemeyi sunar: <em>Ücretsiz denemeyi
-başlat</em>'a dokunun ve hiçbir ücret içermeyen Apple penceresini onaylayın. 14 gün boyunca
-tüm özellikleri istediğiniz kadar ilaçla kullanırsınız. Sonrasında, kurmuş
-olduğunuz hatırlatmalar <strong>satın alsanız da almasanız da çalışmaya devam eder</strong>.
-Tek seferlik satın alma; ilaç ve program eklemek ya da değiştirmek, yeni kişi eklemek ve
-geçmişinizi PDF ya da CSV olarak dışa aktarmak için gerekir. Yedek alma ve geri yükleme her
-zaman ücretsiz kalır; verileriniz hiçbir zaman kilitlenmez.</p>
-
-<h2>Nasıl satın alırım ya da bir satın almayı geri yüklerim?</h2>
-<p>Ayarlar'ı açıp <em>Tam Erişim</em>'e dokunun. <em>Satın al</em> tek seferlik satın almayı
-yapar. <em>Satın alımı geri yükle</em>, Apple kimliğinizle yeni bir iPhone'da ya da yeniden
-yükledikten sonra satın almanızı geri getirir. DoseClock hesabı diye bir şey yoktur.</p>
-
-<h2>Yeni bir iPhone'a nasıl geçerim?</h2>
-<p>Eski iPhone'unuzda: Ayarlar → Verileriniz → Yedek → <em>Yedek al</em>. Bir parola seçin
-ve dosyayı yeni telefondan ulaşabileceğiniz bir yere, örneğin iCloud Drive'a kaydedin. Yeni
-iPhone'da DoseClock'u yükleyin, ardından Ayarlar → Verileriniz → Yedek → <em>Yedekten geri
-yükle</em>'yi seçin.
-<strong>Unutulan bir parolayı kurtaramayız</strong>; parolanızı güvenli bir yerde
-saklayın.</p>
-<p>iCloud cihaz yedeği DoseClock verilerini yeni telefona taşımaz. Bu bilerek böyledir:
-verilerinizin kilidini açan anahtar, oluşturulduğu iPhone'dan hiç çıkmaz.</p>
-
-<h2>Geçmişimi doktorumla nasıl paylaşırım?</h2>
-<p>Geçmiş'i açın, dönemi seçin, <em>Dışa aktar</em>'a dokunun ve PDF'i (yazdırmak ya da
-göndermek için) veya CSV'yi (bir tablo) seçin. Dosya, paylaştığınız yere gider; DoseClock onu
-hiçbir yere yüklemez.</p>
-
-<h2>Verilerimi nasıl silerim?</h2>
-<p>Ayarlar → Verileriniz → <em>Tüm verileri sil</em>. Her şey iPhone'unuzdan silinir ve tüm
-hatırlatmalar iptal edilir. Bizde hiçbir kopya olmadığı için silinecek başka bir şey
-yoktur.</p>
-
-<h2>Bu tıbbi tavsiye mi?</h2>
-<p>Hayır. DoseClock bir hatırlatma aracıdır. Doz önermez ve ilaç etkileşimlerini kontrol
-etmez. Her zaman doktorunuzun ve eczacınızın talimatlarına uyun.</p>
-
-<p><a href="privacy.html#tr">Gizlilik Politikası</a></p>
-</article>
 </main>
 </body>
 </html>

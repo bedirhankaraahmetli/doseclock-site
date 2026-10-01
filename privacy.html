@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DoseClock Privacy Policy</title>
+<link rel="icon" href="icon.png">
 <meta name="description" content="DoseClock collects no data. Everything you enter stays on your iPhone, encrypted.">
+<link rel="alternate" hreflang="en" href="https://doseclock.app/privacy.html">
+<link rel="alternate" hreflang="tr" href="https://doseclock.app/tr/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://doseclock.app/privacy.html">
 <style>
   :root { --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --accent:#10606e; --rule:#cbd5e1; }
   @media (prefers-color-scheme: dark) {
@@ -20,13 +24,25 @@
   .meta { color: var(--muted); font-size: 1rem; margin: 0 0 1.5rem; }
   .summary { border-left: 4px solid var(--accent); padding: .25rem 0 .25rem 1rem; }
   a { color: var(--accent); }
-  nav { font-size: 1rem; margin-bottom: 1.5rem; }
-  hr { border: 0; border-top: 1.5px solid var(--rule); margin: 4rem 0 3rem; }
+  header { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
+           gap: .75rem 1.5rem; margin-bottom: 2.5rem; }
+  .brand { display:flex; align-items:center; gap:1rem; font-weight:600; font-size:1.6rem;
+           letter-spacing:-0.01em; color:var(--fg); text-decoration:none; }
+  .brand img { width:64px; height:64px; border-radius:15px; }
+  nav { font-size: 1rem; display:flex; flex-wrap:wrap; gap:.25rem 1.25rem; }
+  nav [aria-current] { color: var(--fg); font-weight: 600; text-decoration: none; }
 </style>
 </head>
 <body>
 <main>
-<nav><a href="./">DoseClock</a> · <a href="#tr" hreflang="tr" lang="tr">Türkçe</a> · <a href="support.html">Support</a></nav>
+<header>
+  <a class="brand" href="./"><img src="icon.png" alt="" width="64" height="64">DoseClock</a>
+  <nav>
+    <a href="tr/privacy.html" hreflang="tr" lang="tr">Türkçe</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html" aria-current="page">Privacy</a>
+  </nav>
+</header>
 
 <article lang="en">
 <h1>DoseClock Privacy Policy</h1>
@@ -118,99 +134,7 @@ and pharmacist's instructions.</p>
 <p>Bedirhan Karaahmetli · <a href="mailto:contact@doseclock.app">contact@doseclock.app</a></p>
 </article>
 
-<hr>
 
-<article lang="tr" id="tr">
-<h1>DoseClock Gizlilik Politikası</h1>
-<p class="meta">Yürürlük tarihi: 29 Eylül 2026</p>
-
-<p class="summary"><strong>DoseClock hiçbir veri toplamaz.</strong> Hesap yok, analiz yok,
-reklam yok, takip yok. Girdiğiniz her şey iPhone'unuzda, şifreli bir veritabanında kalır.
-Geliştirici bu bilgilerin hiçbirini almaz; çünkü gidebilecekleri bir DoseClock sunucusu
-yoktur.</p>
-
-<h2>Girdiğiniz bilgiler ve nerede durdukları</h2>
-<p>DoseClock yalnızca sizin verdiğiniz bilgileri saklar: ilaç adları ve doz miktarları,
-programlar ve saatler, alındı, atlandı ya da kaçırıldı olarak kaydettiğiniz dozlar, notlar ve
-atlama nedenleri, hap sayıları ve yenileme ayarları, eczane telefon numaraları, ilaçlarını
-takip ettiğiniz kişilerin adları ve uygulama ayarlarınız.</p>
-<p>Bunların tamamı yalnızca iPhone'unuzda, 256 bit AES ile şifrelenmiş bir veritabanında
-(SQLCipher) saklanır. Veritabanının anahtarı iOS Anahtar Zinciri'nde tutulur ve bu cihazda
-kalacak şekilde işaretlidir: hiçbir zaman bir yedeğe kopyalanmaz ya da başka bir cihazla
-eşitlenmez.</p>
-
-<h2>iPhone'unuzdan ne çıkar?</h2>
-<p><strong>Siz göndermedikçe hiçbir şey.</strong> Uygulama internete tek bir amaçla bağlanır:
-fiyatı göstermek, ücretsiz denemeyi başlatmak, satın alma yapmak ve bir satın almayı geri
-yüklemek için App Store'a. Bu
-alışveriş cihazınızla Apple arasındadır. Satın almanız iPhone'unuzda doğrulanır; geliştirici
-adınızı, Apple kimliğinizi ya da satın alma ayrıntılarını almaz. App Store hesabınızla ilgili
-işlemler <a href="https://www.apple.com/tr/legal/privacy/">Apple Gizlilik Politikası</a>'na
-tabidir.</p>
-
-<h2>iOS'un uygulamanın şifrelemesi dışında tuttukları</h2>
-<p>DoseClock kapalıyken size hatırlatabilmesi için iOS'a her hatırlatmanın önceden verilmesi
-gerekir. Bunlar iPhone'unuzda kalır ve geliştiriciye hiçbir zaman gönderilmez, ama var
-olduklarını bilmeniz gerekir:</p>
-<ul>
-  <li><strong>Hatırlatmalar.</strong> Planlanan her hatırlatma ilacın adını ve dozunu içerir.
-  Bildirimler ve yenileme hatırlatmaları iOS'un bildirim sisteminde tutulur. iOS 26 ve
-  sonrasında, alarmlara izin verdiyseniz, tam alarmlar iOS'un alarm sisteminde tutulur.
-  Bunlar DoseClock'un şifrelemesiyle değil, iPhone'unuzun kendi güvenliğiyle korunur.</li>
-  <li><strong>Cihaz yedekleri.</strong> iCloud Yedekleme ya da bilgisayara yedekleme açıksa,
-  iOS DoseClock'un veritabanı dosyasını yedeğe ekleyebilir. Bu kopya şifreli kalır ve anahtarı
-  yedekte yer almaz; bu yüzden Apple ve geliştirici dahil kimse onu okuyamaz. Bu aynı zamanda
-  cihaz yedeğinin DoseClock verilerinizi yeni bir iPhone'a taşımayacağı anlamına gelir; bunun
-  için DoseClock'un kendi yedeğini kullanın (aşağıda).</li>
-  <li><strong>Deneme süreniz.</strong> Ücretsiz deneme, satın alma gibi App Store'daki bir
-  öğedir; bu yüzden başlattığınız tarihi Apple kaydeder. DoseClock'un eski sürümleri bu
-  tarihi cihazdaki iOS Anahtar Zinciri'nde tutuyordu. İkisi de sağlık bilgisi
-  içermez.</li>
-</ul>
-
-<h2>Paylaşmayı sizin seçtikleriniz</h2>
-<ul>
-  <li><strong>Yedekler.</strong> Bir DoseClock yedeği, seçtiğiniz bir parolayla şifrelenmiş
-  tek bir dosyadır. Nereye gideceğine siz karar verirsiniz. Geliştirici onu hiç görmez ve
-  unutulan bir parolayı kurtaramaz.</li>
-  <li><strong>Geçmiş dışa aktarımları.</strong> PDF ve CSV dosyaları şifrelenmez, çünkü
-  okunmak için hazırlanırlar; örneğin doktorunuz tarafından. Paylaştığınız andan itibaren,
-  gönderdiğiniz kişi ya da uygulama tarafından işlenirler.</li>
-  <li><strong>Eczanenizi aramak.</strong> Bir eczanenin numarasına dokunduğunuzda numara
-  Telefon uygulamasına iletilir. DoseClock arama yapmaz ve aramaları kaydetmez.</li>
-</ul>
-
-<h2>Hata raporları</h2>
-<p>DoseClock hiçbir hata raporlama ya da analiz kodu içermez. iOS Ayarlar → Gizlilik ve
-Güvenlik → Analizler ve İyileştirmeler bölümünde <em>Uygulama Geliştiricileriyle Paylaş</em>
-seçeneğini açtıysanız, Apple hata raporlarını geliştiriciyle paylaşabilir. Bu ayar sizindir
-ve raporların içeriğini Apple belirler.</p>
-
-<h2>Verilerinizin saklanması ve silinmesi</h2>
-<p>Verileriniz siz silene kadar iPhone'unuzda kalır. <em>Ayarlar → Verileriniz → Tüm
-verileri sil</em> her ilacı, programı ve kaydedilmiş dozu siler ve tüm hatırlatmaları iptal
-eder. Uygulamayı silmek de veritabanını siler.</p>
-<p>Geliştirici sizinle ilgili hiçbir veri tutmadığı için bizden talep edebileceğiniz,
-düzeltebileceğiniz ya da sildirebileceğiniz bir şey yoktur. Her şey zaten sizin
-elinizdedir.</p>
-
-<h2>Diğer taraflar</h2>
-<p>DoseClock üçüncü taraflara ait analiz, reklam ya da takip kodu içermez ve verileri kimseyle
-paylaşmaz.</p>
-
-<h2>Çocuklar</h2>
-<p>DoseClock çocuklara yönelik değildir ve kimseden veri toplamaz.</p>
-
-<h2>Tıbbi tavsiye değildir</h2>
-<p>DoseClock bir hatırlatma aracıdır. Tıbbi tavsiye vermez. Her zaman doktorunuzun ve
-eczacınızın talimatlarına uyun.</p>
-
-<h2>Değişiklikler</h2>
-<p>Bu politika değişirse yeni sürüm, yeni bir yürürlük tarihiyle burada yayımlanır.</p>
-
-<h2>İletişim</h2>
-<p>Bedirhan Karaahmetli · <a href="mailto:contact@doseclock.app">contact@doseclock.app</a></p>
-</article>
 </main>
 </body>
 </html>
