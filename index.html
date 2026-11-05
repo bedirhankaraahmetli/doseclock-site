@@ -57,8 +57,11 @@
   h1 { font-size: clamp(2rem, 6vw, 3.1rem); line-height: 1.1; margin: 0 0 1.25rem;
        letter-spacing: -0.02em; }
   .lede { font-size: 1.25rem; color: var(--muted); margin: 0 0 2rem; }
-  .soon { display:inline-block; font-size: 1rem; font-weight: 600; margin: 0;
-          padding: .6rem 1.1rem; border: 1.5px solid var(--rule); border-radius: 999px; }
+  .store { display:inline-block; font-size: 1.125rem; font-weight: 600; margin: 0;
+           padding: .9rem 1.6rem; min-height: 56px; box-sizing: border-box;
+           background: var(--accent); color: var(--on-accent); text-decoration: none;
+           border-radius: 999px; }
+  .store:hover { text-decoration: underline; }
   .req { color: var(--muted); font-size: 1rem; margin: .75rem 0 0; }
 
   /* ---- The phone. Proportions of a 6.1" iPhone; the screen is scaled ~0.77 of real. ---- */
@@ -149,7 +152,7 @@
     <h1>Medication reminders.<br>No account, no subscription.</h1>
     <p class="lede">DoseClock reminds you when each medication is due and keeps track of what
     you took. Add as many medications as you need. Everything stays on your iPhone.</p>
-    <p class="soon">Coming soon to the App Store</p>
+    <p><a class="store" href="https://apps.apple.com/app/id6810657272">Download on the App Store</a></p>
     <p class="req">For iPhone, iOS 15 or later.</p>
   </div>
 
